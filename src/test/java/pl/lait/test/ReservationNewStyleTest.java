@@ -1,5 +1,6 @@
 package pl.lait.test;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -30,4 +31,9 @@ MainPage mp;
 		mp.goToLoginPage();
 		mp.loginAs("styko@wp.pl", "dupadupa");
 	}
+	
+	@After
+	public void tearDown() {
+		Init.end();
+}
 }
