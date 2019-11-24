@@ -11,6 +11,7 @@ public class ReservationNewStyleTest {
 	
 WebDriver driver;
 MainPage mp;
+
 	
 	@Before
 	public void openPage() {
@@ -28,6 +29,7 @@ MainPage mp;
 	
 	@Test
 	public void fullReservationTest() {
+		MainPage mp = new MainPage(driver);
 		mp.goToLoginPage();
 		mp.loginAs("styko@wp.pl", "dupadupa");
 	}

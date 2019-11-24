@@ -40,7 +40,7 @@ WebDriver driver;
 		driver.findElement(By.name("confirmPassword")).sendKeys("dupadupa");
 		//klinięcie Register
 		driver.findElement(By.name("register")).click();
-		
+	
 	}
 	
 	@Test
@@ -95,7 +95,7 @@ WebDriver driver;
 		
 	@After
 	public void tearDown() {
-		driver.close();
+		Init.end();
 		}
 
 }
