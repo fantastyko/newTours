@@ -21,16 +21,16 @@ public class Init {
 			System.out.println("--wewn getDriver");
 			File file = new File("C:/Users/jagna/Desktop/Tester/SeleniumLibs/chromedriver/chromedriver.exe");
 			System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-			//driver = new ChromeDriver();
+			driver = new ChromeDriver();
 			URL remoteAdress = null;
 			try {
-				remoteAdress = new URL("http://localhost:4444/wd/hub");
+				remoteAdress = new URL("http://192.168.0.109:4444/wd/hub");
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-			driver = new RemoteWebDriver(remoteAdress, capabilities);
+			//driver = new RemoteWebDriver(remoteAdress, capabilities);
 			//USTAWIENIE OPÓŹNIENIA WYKONANIA AKCJI
 			driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 			//GLOBALNE USTAWIENIA ROZMIARU OKNA PRZEGLĄDARKI
@@ -47,4 +47,11 @@ public class Init {
 		}
 
 	}
+
+	public static void end() {
+		driver.quit();
+		driver = null;
+	}
+
+
 }
