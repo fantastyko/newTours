@@ -1,5 +1,4 @@
 package pl.lait.test;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,17 +6,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class MenuTest {
-	
-	
-	
+
 	WebDriver driver;
-	
+
 	@Before
 	public void openPage() {
 		driver = Init.getDriver();
-			
+
 	}
-	
+
 	@Test
 	public void topMenuTest() {
 		System.out.println("!!Górne menu");
@@ -28,7 +25,7 @@ public class MenuTest {
 		String title = driver.getTitle();
 		System.out.println(title);
 	}
-	
+
 	@Test
 	public void leftMenuTest() {
 		System.out.println("!!Lewe menu");
@@ -42,11 +39,10 @@ public class MenuTest {
 		String title = driver.getTitle();
 		System.out.println(title);
 	}
-	
+
 	@After
 	public void tearDown() {
 		driver.close();
 	}
-	
 
 }

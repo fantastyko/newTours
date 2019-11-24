@@ -93,9 +93,9 @@ WebDriver driver;
 				
 	}
 		
-	//@After
-	//public void tearDown() {
-	//	driver.close();
-	//	}
+	@After
+	public void tearDown() {
+		driver.close();
+		}
 
 }
